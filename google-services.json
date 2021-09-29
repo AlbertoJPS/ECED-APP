@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "139389724038",
+    "project_id": "eced-e3031",
+    "firebase_url": "https://eced-e3031.firebaseio.com",
+    "storage_bucket": "eced-e3031.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139389724038:android:083fa6034cff6bb3727807",
+        "android_client_info": {
+          "package_name": "com.eced.eced_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139389724038-4jnabcfklrobtf12208rrp2rcl00qbkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcS9iPYxmtL6mbjv9poP_Fk37uWgbYkl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139389724038-4jnabcfklrobtf12208rrp2rcl00qbkd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

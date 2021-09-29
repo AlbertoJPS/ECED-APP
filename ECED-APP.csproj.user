@@ -4,5 +4,6 @@
     <SelectedDevice>nexus_5_r_11_0_-_api_30</SelectedDevice>
     <ActiveDebugProfile>nexus_5_r_11_0_-_api_30</ActiveDebugProfile>
     <DefaultDevice>nexus_5_r_11_0_-_api_30</DefaultDevice>
+    <AndroidDesignerPreferredTheme>AppTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
