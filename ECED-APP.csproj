@@ -110,9 +110,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResourceAnalysisConfig Include="Resources\drawable\splash_screen.xml">
+    <AndroidResource Include="Resources\drawable\splash_screen.xml">
       <SubType>Designer</SubType>
-    </AndroidResourceAnalysisConfig>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\include_main.xml">
