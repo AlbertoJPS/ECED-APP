@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/colorPrimaryLight"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/accountImage"
+        android:src="@drawable/account_iconn"
+        android:scaleType="centerCrop"
+        android:contentDescription=""
+        android:paddingBottom="60dp"
+        android:layout_gravity="center"
+        android:layout_height="400dp"
+        android:layout_width="110dp"
+    />
+
+    <TextView
+        android:id="@+id/accountTitle"
+        android:text="@string/convidados"
+        android:textColorLink="@color/colorDarker"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="11.3dp" 
+    />
+
+    <View
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_gravity="bottom"
+    />
+
+</FrameLayout>

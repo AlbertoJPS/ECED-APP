@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--For all properties see: https://aka.ms/android-menu-resource-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+
+  <group android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/navMeuPerfil"
+      android:title="Meu Perfil"
+    />
+
+    <item
+      android:id="@+id/navConfiguracoes"
+      android:title="Configurações"
+    />
+
+    <item
+      android:id="@+id/navAjuda"
+      android:title="Ajuda"
+    />
+
+    <item
+      android:id="@+id/navSobre"
+      android:title="Sobre"
+    />
+
+  </group>
+
+</menu>
