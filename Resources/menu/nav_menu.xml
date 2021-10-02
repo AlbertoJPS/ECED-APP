@@ -2,31 +2,45 @@
 <!--For all properties see: https://aka.ms/android-menu-resource-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:tools="http://schemas.android.com/tools"
-      tools:showIn="navigation_view">
+      tools:showIn="navigation_view"
+      >
 
 
   <group android:checkableBehavior="single">
 
     <item
-      android:id="@+id/navMeuPerfil"
-      android:title="Meu Perfil"
+      android:id="@+id/navEscola"
+      android:title="@string/navEscola"
     />
-
     <item
-      android:id="@+id/navConfiguracoes"
-      android:title="Configurações"
+      android:id="@+id/navPerfilResponsavel"
+      android:title="@string/navRespons"
     />
-
     <item
-      android:id="@+id/navAjuda"
-      android:title="Ajuda"
+      android:id="@+id/navPerfilAluno"
+      android:title="@string/navAluno"
     />
-
     <item
-      android:id="@+id/navSobre"
-      android:title="Sobre"
+      android:id="@+id/navEndereco"
+      android:title="@string/navEndereco"
     />
-
+    <item
+      android:id="@+id/navFalta"
+      android:title="@string/navFalta"
+    />
+    <item
+      android:id="@+id/navComunicado"
+      android:title="@string/navComunicado"
+    />
+    <item
+      android:id="@+id/navBoletim"
+      android:title="@string/navBoletim"
+    />
+    <item
+      android:id="@+id/navConfig"
+      android:title="@string/navConfig"
+    />
+    
   </group>
 
 </menu>

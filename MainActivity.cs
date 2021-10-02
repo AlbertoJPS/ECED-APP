@@ -9,7 +9,7 @@ using Java.Util;
 
 namespace ECED_APP
 {
-    [Activity(Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Theme = "@style/ECEDTheme", MainLauncher = false)]
     public class MainActivity : AppCompatActivity
     {
         FirebaseFirestore database;
@@ -33,6 +33,7 @@ namespace ECED_APP
 
             DocumentReference docRef = database.Collection("testAndroid").Document().Collection("subTestAndroid").Document();
             docRef.Set(doc);
+            
         }
         public FirebaseFirestore GetDatabase()
         {

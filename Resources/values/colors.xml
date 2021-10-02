@@ -3,8 +3,11 @@
   <color name="colorPrimary">#27AA94</color>
   <color name="colorPrimaryDark">#63665E</color>
   <color name="colorPrimaryLight">#FFFFFF</color>
-  <color name="colorWhite">#FFFFFF</color>
   <color name="colorAccent">#11FB83</color>
+  <color name="ECEDrPrimary">#27AA94</color>
+  <color name="ECEDPrimaryDark">#63665E</color>
+  <color name="ECEDrPrimaryLight">#FFFFFF</color>
+  <color name="ECEDAccent">#11FB83</color>
   <color name="colorBlack">#000000</color>
   <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
