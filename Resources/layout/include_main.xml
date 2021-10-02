@@ -10,7 +10,7 @@
         <LinearLayout
             android:layout_height="fill_parent"
             android:layout_width="fill_parent"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorWhite"
             android:padding="20dp"
             android:orientation="vertical"
             >
@@ -19,7 +19,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/titulo"
+                android:textStyle="bold"
                 android:textSize="20sp"
+            
                 android:gravity="center"
              />
             <EditText
@@ -42,6 +44,7 @@
 
             <Button
                 android:id="@+id/testbutton"
+                android:textColor="@color/colorWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"

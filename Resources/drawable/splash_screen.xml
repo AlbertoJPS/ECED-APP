@@ -7,7 +7,7 @@
   </item>
   <item>
     <bitmap
-        android:src="@drawable/logo_ECED"
+        android:src="@drawable/Logo_ECED"
         android:tileMode="disabled"
         android:gravity="center"/>
   </item>
