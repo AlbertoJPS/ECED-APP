@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ECED_APP</string>
     <string name="action_settings">Settings</string>
+    <string name="mainLayout">Main Layout</string>
+    <string name="convidados">Convidados</string>
+    <string name="titulo">"Salvar Rota no Firebase"</string>
+    <string name="origem">Origem</string>
+    <string name="destino">Destino</string>
+    <string name="btnSave">Salvar no Firebase</string>
 </resources>
