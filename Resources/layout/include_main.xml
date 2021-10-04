@@ -5,20 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
+        
     
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="-30dp"
+            android:minHeight="?android:attr/actionBarSize"
+            android:id="@+id/mainToolbar"
+        />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/ecedWhite"
+            android:id="@+id/fragmentContainer"
+        />
+    </LinearLayout>
+
+
+        <!--<LinearLayout
             android:layout_height="fill_parent"
             android:layout_width="fill_parent"
             android:background="@color/ecedWhite"
             android:orientation="vertical"
             >
-            <androidx.appcompat.widget.Toolbar
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:layout_marginHorizontal="-30dp"
-                android:minHeight="?android:attr/actionBarSize"
-                android:id="@+id/mainToolbar"
-            />
 
             <TextView
                 android:layout_width="match_parent"
@@ -31,8 +49,8 @@
             <EditText
                 android:id="@+id/origem"
                 android:hint="@string/origem"
-                android:layout_marginHorizontal="20dp"  
-                android:layout_marginVertical="10dp"           
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" 
@@ -41,8 +59,8 @@
             <EditText
                 android:id="@+id/destino"
                 android:hint="@string/destino"
-                android:layout_marginHorizontal="20dp" 
-                android:layout_marginVertical="10dp" 
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text" 
@@ -57,7 +75,8 @@
                 android:layout_margin="10dp"
                 android:text="@string/btnSave"
             />
-        </LinearLayout>
+        </LinearLayout>-->
     
+     
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
