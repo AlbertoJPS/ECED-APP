@@ -7,21 +7,20 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
-  <style name="MyTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+  <style name="EcedTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/splash_screen</item>
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowContentOverlay">@null</item>
     <item name="android:windowActionBar">true</item>
   </style>
 
-  <style name="ECEDTheme" parent="Theme.AppCompat.Light.NoActionBar">
-    <item name="colorPrimary">@color/ECEDrPrimary</item>
-    <item name="colorPrimaryDark">@color/ECEDPrimaryDark</item>
-    <item name="colorPrimaryLight">@color/ECEDrPrimaryLight</item>
-    <item name="colorAccent">@color/ECEDAccent</item>
+  <style name="EcedTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/ecedPrimary</item>
+    <item name="colorPrimaryDark">@color/ecedPrimaryDark</item>
+    <item name="colorAccent">@color/ecedAccent</item>
   </style>
 
-  <style name="ECEDTheme.ActionBar.Transparent" parent="ECEDTheme">
+  <style name="EcedTheme.ActionBar.Transparent" parent="EcedTheme">
     <item name="colorPrimary">@android:color/transparent</item>
   </style>
 

@@ -22,11 +22,11 @@
         android:id="@+id/navView"
         android:layout_height="match_parent"
         android:layout_width="300dp"
-        android:background="@color/ECEDrPrimaryLight"
+        android:background="@color/ecedWhite"
         android:layout_gravity="start"
         app:headerLayout="@layout/headerLayout"
         app:menu="@menu/nav_menu"
-        app:theme="@style/ECEDTheme"
+        app:theme="@style/EcedTheme"
         />
     
         
