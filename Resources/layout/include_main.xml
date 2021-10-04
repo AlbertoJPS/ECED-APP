@@ -50,6 +50,7 @@
 
             <Button
                 android:id="@+id/testbutton"
+                android:backgroundTint="@color/ecedPrimary"
                 android:textColor="@color/ecedWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
