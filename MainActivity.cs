@@ -1,39 +1,28 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Runtime;
+using Android.Views;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using AndroidX.AppCompat.Widget;
 using Firebase;
 using Firebase.Firestore;
 using Java.Util;
 
 namespace ECED_APP
 {
-    [Activity(Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Theme = "@style/EcedTheme", MainLauncher = false)]
     public class MainActivity : AppCompatActivity
     {
         FirebaseFirestore database;
+        AndroidX.DrawerLayout.Widget.DrawerLayout drawerLayout;
+        AndroidX.AppCompat.Widget.Toolbar mainToolbar;
+
         EditText origem;
         EditText destino;
         Button testButton;
 
-        void ConnectViews()
-        {
-            origem = (EditText)FindViewById(Resource.Id.origem);
-            destino = (EditText)FindViewById(Resource.Id.destino);
-            testButton = (Button)FindViewById(Resource.Id.testbutton);
-
-            testButton.Click += TestButton_Click;
-        }
-        private void TestButton_Click(object sender, System.EventArgs e)
-        {
-            HashMap doc = new HashMap();
-            doc.Put("origem", origem.Text);
-            doc.Put("destino", destino.Text);
-
-            DocumentReference docRef = database.Collection("testAndroid").Document().Collection("subTestAndroid").Document();
-            docRef.Set(doc);
-        }
+       
         public FirebaseFirestore GetDatabase()
         {
             FirebaseFirestore database;
@@ -62,14 +51,52 @@ namespace ECED_APP
             database = GetDatabase();
 
         }
-       
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        void ConnectViews()
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            drawerLayout = (AndroidX.DrawerLayout.Widget.DrawerLayout)FindViewById(Resource.Id.drawerLayout);
+            mainToolbar = (AndroidX.AppCompat.Widget.Toolbar)FindViewById(Resource.Id.mainToolbar);
+            SetSupportActionBar(mainToolbar);
+            SupportActionBar.Title = "";
+            AndroidX.AppCompat.App.ActionBar actionBar = SupportActionBar;
+            actionBar.SetHomeAsUpIndicator(Resource.Mipmap.ic_menu);
+            actionBar.SetDisplayHomeAsUpEnabled(true);
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            origem = (EditText)FindViewById(Resource.Id.origem);
+            destino = (EditText)FindViewById(Resource.Id.destino);
+            testButton = (Button)FindViewById(Resource.Id.testbutton);
+
+            testButton.Click += TestButton_Click;
+        }
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    drawerLayout.OpenDrawer((int)GravityFlags.Left);
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
+        }
+        private void TestButton_Click(object sender, System.EventArgs e)
+        {
+            HashMap doc = new HashMap();
+            doc.Put("origem", origem.Text);
+            doc.Put("destino", destino.Text);
+
+            DocumentReference docRef = database.Collection("testAndroid").Document().Collection("subTestAndroid").Document();
+            docRef.Set(doc);
+
         }
 
-      
+        //public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        //{
+        //    Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        //    base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        //}
+
+
     }
 }

@@ -12,7 +12,7 @@ using System.Text;
 
 namespace ECED_APP
 {
-    [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/MyTheme.Splash", NoHistory = true, MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Icon = "@mipmap/ic_launcher", Theme = "@style/EcedTheme.Splash", NoHistory = true, MainLauncher = true)]
     public class SplashActivity : AppCompatActivity
     {
 

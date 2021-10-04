@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ECED_APP</string>
+    <string name="app_name">ECED</string>
     <string name="action_settings">Settings</string>
     <string name="mainLayout">Main Layout</string>
     <string name="convidados">Convidados</string>
@@ -7,4 +7,12 @@
     <string name="origem">Origem</string>
     <string name="destino">Destino</string>
     <string name="btnSave">Salvar no Firebase</string>
+    <string name="navEscola">Info Escola</string>
+    <string name="navRespons">Perfil do Responsável</string>
+    <string name="navAluno">Perfil do Aluno</string>
+    <string name="navEndereco">Meu Endereço</string>
+    <string name="navFalta">Relatar Ausência</string>
+    <string name="navComunicado">Fazer Comunicado</string>
+    <string name="navBoletim">Acessar Boletim</string>
+    <string name="navConfig">Configurações</string>
 </resources>
