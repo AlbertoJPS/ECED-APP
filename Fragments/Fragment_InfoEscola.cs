@@ -12,7 +12,7 @@ using System.Text;
 
 namespace ECED_APP.Fragments
 {
-    public class Fragment_EscolaHome : AndroidX.Fragment.App.Fragment
+    public class Fragment_InfoEscola : AndroidX.Fragment.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -23,7 +23,7 @@ namespace ECED_APP.Fragments
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            View view = inflater.Inflate(Resource.Layout.Fragment_EscolaHome, container, false);
+            View view = inflater.Inflate(Resource.Layout.Fragment_InfoEscola, container, false);
             
             return view;
         }

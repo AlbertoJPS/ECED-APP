@@ -7,7 +7,7 @@
     <string name="origem">Origem</string>
     <string name="destino">Destino</string>
     <string name="btnSave">Salvar no Firebase</string>
-    <string name="navEscola">Info Escola</string>
+    <string name="navInfoEscola">Info Escola</string>
     <string name="navRespons">Perfil do Responsável</string>
     <string name="navAluno">Perfil do Aluno</string>
     <string name="navEndereco">Meu Endereço</string>

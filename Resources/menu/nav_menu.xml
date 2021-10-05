@@ -9,7 +9,11 @@
   <group android:checkableBehavior="single">
 
     <item
-      android:id="@+id/navEscolaHome"
+      android:id="@+id/navBoletim"
+      android:title="@string/navBoletim"
+    />
+    <item
+      android:id="@+id/navInfoEscola"
       android:title="@string/navEscola"
     />
     <item
@@ -31,10 +35,6 @@
     <item
       android:id="@+id/navComunicado"
       android:title="@string/navComunicado"
-    />
-    <item
-      android:id="@+id/navBoletim"
-      android:title="@string/navBoletim"
     />
     <item
       android:id="@+id/navConfig"
