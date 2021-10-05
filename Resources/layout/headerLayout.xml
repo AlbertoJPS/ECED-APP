@@ -6,7 +6,7 @@
     android:background="@color/ecedPrimary"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/accountImage"
         android:src="@drawable/account_iconn"
         android:scaleType="centerCrop"
@@ -15,6 +15,17 @@
         android:layout_gravity="center"
         android:layout_height="100dp"
         android:layout_width="100dp"
+    />-->
+
+    <ImageView
+        android:id="@+id/circleimage"
+        android:src="@drawable/edilson_icon"
+        android:scaleType="centerCrop"
+        android:contentDescription=""
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center"
+        android:layout_height="130dp"
+        android:layout_width="130dp"
     />
 
     <TextView

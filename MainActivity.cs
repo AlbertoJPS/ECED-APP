@@ -46,7 +46,7 @@ namespace ECED_APP
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.Main_Activity);
             ConnectViews();
             database = GetDatabase();
 
@@ -82,21 +82,21 @@ namespace ECED_APP
                     drawerLayout.OpenDrawer((int)GravityFlags.Left);
                     return true;
 
-                //case Resource.Id.navEscolaHome:
-                    
-                //case Resource.Id.navPerfilResponsavel:
+                case Resource.Id.navEscolaHome:
 
-                //case Resource.Id.navPerfilAluno:
+                case Resource.Id.navPerfilResponsavel:
 
-                //case Resource.Id.navEndereco:
+                case Resource.Id.navPerfilAluno:
 
-                //case Resource.Id.navFalta:
+                case Resource.Id.navEndereco:
 
-                //case Resource.Id.navComunicado:
+                case Resource.Id.navFalta:
 
-                //case Resource.Id.navBoletim:
+                case Resource.Id.navComunicado:
 
-                //case Resource.Id.navConfig:
+                case Resource.Id.navBoletim:
+
+                case Resource.Id.navConfig:
 
                 default:
                     return base.OnOptionsItemSelected(item);

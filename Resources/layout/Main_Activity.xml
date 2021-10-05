@@ -6,17 +6,30 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/drawerLayout"
-   
-    >
-    
-    <LinearLayout
+>
+
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:background="@color/ecedWhite"
+    >
 
-        <include layout="@layout/include_main"/>   
+        <androidx.appcompat.widget.Toolbar
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="-30dp"
+            android:minHeight="?android:attr/actionBarSize"
+            android:id="@+id/mainToolbar"
+        />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragmentContainer"
+        />
     
-    </LinearLayout>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
@@ -27,7 +40,6 @@
         app:headerLayout="@layout/headerLayout"
         app:menu="@menu/nav_menu"
         app:theme="@style/EcedTheme"
-        />
+    />
     
-        
 </androidx.drawerlayout.widget.DrawerLayout>
