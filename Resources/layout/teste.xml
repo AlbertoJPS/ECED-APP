@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    
+    <!--    Teste layout
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/ecedWhite">
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/fragmentContainer"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+        />
+        <EditText
+            android:id="@+id/origem"
+            android:hint="@string/origem"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" 
+        />
+
+        <EditText
+            android:id="@+id/destino"
+            android:hint="@string/destino"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" 
+        />
+
+        <Button
+            android:id="@+id/testbutton"
+            android:backgroundTint="@color/ecedPrimary"
+            android:textColor="@color/ecedWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/btnSave"
+        />
+
+    </LinearLayout>-->
+    
+     
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
