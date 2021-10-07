@@ -14,7 +14,7 @@
     />
     <item
       android:id="@+id/navInfoEscola"
-      android:title="@string/navEscola"
+      android:title="@string/navInfoEscola"
     />
     <item
       android:id="@+id/navPerfilResponsavel"
