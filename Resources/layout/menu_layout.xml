@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navView1"
+    android:layout_height="match_parent"
+    android:layout_width="300dp"
+    android:background="@color/ecedWhite"
+    android:layout_gravity="start"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/headerlayout"
+    />
+
+    <ListView
+        android:id="@+id/listNavView1"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:choiceMode="singleChoice"
+    />
+
+</RelativeLayout>
+
+<!--app:headerLayout = "@layout/headerLayout"
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/ecedWhite"
+        android:id="@+id/rootView">
+
+            <ListView
+            android:id="@+id/listNavView"
+            android:layout_height="match_parent"
+            android:layout_width="300dp"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+-->
