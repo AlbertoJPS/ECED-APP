@@ -67,11 +67,12 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDrawerToggle.cs" />
     <Compile Include="Fragments\Fragment_Boletim.cs" />
     <Compile Include="Fragments\Fragment_Comunicado.cs" />
     <Compile Include="Fragments\Fragment_Configuracoes.cs" />
     <Compile Include="Fragments\Fragment_Endereco.cs" />
-    <Compile Include="Fragments\Fragment_EscolaHome.cs" />
+    <Compile Include="Fragments\Fragment_InfoEscola.cs" />
     <Compile Include="Fragments\Fragment_Falta.cs" />
     <Compile Include="Fragments\Fragment_PerfilAluno.cs" />
     <Compile Include="Fragments\Fragment_PerfilResponsavel.cs" />
@@ -254,7 +255,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Fragment_EscolaHome.xml">
+    <AndroidResource Include="Resources\layout\Fragment_InfoEscola.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -300,6 +301,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\edilson_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\menu_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
