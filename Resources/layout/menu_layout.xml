@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/navView"
+    android:id="@+id/navView1"
     android:layout_height="match_parent"
     android:layout_width="300dp"
     android:background="@color/ecedWhite"
@@ -13,14 +13,13 @@
     />
 
     <ListView
-        android:id="@+id/listNavView"
+        android:id="@+id/listNavView1"
         android:layout_height="match_parent"
-        android:layout_width="300dp"
-        android:layout_gravity="start"
+        android:layout_width="match_parent"
         android:choiceMode="singleChoice"
     />
 
-</LinearLayout>
+</RelativeLayout>
 
 <!--app:headerLayout = "@layout/headerLayout"
 

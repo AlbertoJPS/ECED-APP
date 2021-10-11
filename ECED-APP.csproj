@@ -67,6 +67,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDrawerToggle.cs" />
     <Compile Include="Fragments\Fragment_Boletim.cs" />
     <Compile Include="Fragments\Fragment_Comunicado.cs" />
     <Compile Include="Fragments\Fragment_Configuracoes.cs" />

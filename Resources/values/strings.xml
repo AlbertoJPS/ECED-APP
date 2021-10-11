@@ -15,4 +15,6 @@
     <string name="navComunicado">Fazer Comunicado</string>
     <string name="navBoletim">Acessar Boletim</string>
     <string name="navConfig">Configurações</string>
+    <string name="openDrawer">ECED</string>
+    <string name="closeDrawer">ECED</string>
 </resources>

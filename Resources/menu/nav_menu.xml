@@ -1,20 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--For all properties see: https://aka.ms/android-menu-resource-->
+
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:showIn="navigation_view"
-      >
+      xmlns:myapp="https://schemas.android.com/apk/res-auto">
 
-
-  <group android:checkableBehavior="single">
 
     <item
       android:id="@+id/navBoletim"
       android:title="@string/navBoletim"
-    />
-    <item
-      android:id="@+id/navInfoEscola"
-      android:title="@string/navInfoEscola"
     />
     <item
       android:id="@+id/navPerfilResponsavel"
@@ -29,6 +21,10 @@
       android:title="@string/navEndereco"
     />
     <item
+      android:id="@+id/navInfoEscola"
+      android:title="@string/navInfoEscola"
+    />
+    <item
       android:id="@+id/navFalta"
       android:title="@string/navFalta"
     />
@@ -41,6 +37,58 @@
       android:title="@string/navConfig"
     />
     
-  </group>
 
 </menu>
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:myapp="https://schemas.android.com/apk/res-auto">
+
+
+  <group android:checkableBehavior="single">
+
+    <item
+      android:id="@+id/navBoletim"
+      android:title="@string/navBoletim"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navPerfilResponsavel"
+      android:title="@string/navRespons"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navPerfilAluno"
+      android:title="@string/navAluno"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navEndereco"
+      android:title="@string/navEndereco"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navInfoEscola"
+      android:title="@string/navInfoEscola"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navFalta"
+      android:title="@string/navFalta"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navComunicado"
+      android:title="@string/navComunicado"
+      myapp:showAsAction="never"
+    />
+    <item
+      android:id="@+id/navConfig"
+      android:title="@string/navConfig"
+      myapp:showAsAction="never"
+    />
+
+  </group>
+
+</menu>-->
