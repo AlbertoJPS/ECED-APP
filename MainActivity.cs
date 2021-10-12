@@ -21,7 +21,7 @@ namespace ECED_APP
     [Activity(Label = "@string/app_name", Theme = "@style/EcedTheme", MainLauncher = false)]
     public class MainActivity : AppCompatActivity
     {
-        FirebaseFirestore database;
+        
         AndroidX.DrawerLayout.Widget.DrawerLayout drawerLayout;
         AndroidX.AppCompat.Widget.Toolbar mainToolbar;
         private AppDrawerToggle drawerToggle;
@@ -49,7 +49,7 @@ namespace ECED_APP
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main_Activity);
-            database = GetDatabase();
+            DBConection.GetDatabase();
             CreateFragmentsPages();
             currentFragment = fragment_Boletim;
             CreateNavigatorListView();
@@ -62,22 +62,8 @@ namespace ECED_APP
 
 
         }
-        public FirebaseFirestore GetDatabase()
-        {
-            FirebaseFirestore database;
-            var options = new FirebaseOptions.Builder()
-                .SetProjectId("eced-e3031")
-                .SetApplicationId("eced-e3031")
-                .SetApiKey("AIzaSyCcS9iPYxmtL6mbjv9poP_Fk37uWgbYkl8")
-                .SetDatabaseUrl("https://eced-e3031.firebaseio.com")
-                .SetStorageBucket("eced-e3031.appspot.com")
-                .Build();
+       
 
-            var app = FirebaseApp.InitializeApp(this, options);
-            database = FirebaseFirestore.GetInstance(app);
-
-            return database;
-        }
         void ConnectNavigator()
         {
 
