@@ -36,7 +36,6 @@ namespace ECED_APP
         private Fragment_Falta fragment_Falta;
         private Fragment_Comunicado fragment_Comunicado;
         private Fragment_Configuracoes fragment_Configuracoes;
-
         private List<string> menuList;
 
 
@@ -69,7 +68,11 @@ namespace ECED_APP
 
             drawerLayout = FindViewById<AndroidX.DrawerLayout.Widget.DrawerLayout>(Resource.Id.drawerLayout);
             mainToolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar> (Resource.Id.mainToolbar);
-            listView = FindViewById<ListView>(Resource.Id.listNavView);
+            //listView = FindViewById<ListView>(Resource.Id.listNavView);
+            TextView = FindViewById<TextView>(Resource.Id.materiaBoletim);
+
+
+
 
             SetSupportActionBar(mainToolbar);
 

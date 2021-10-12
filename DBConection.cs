@@ -11,13 +11,14 @@ using System.Text;
 using Firebase;
 using Firebase.Firestore;
 using AndroidX.AppCompat.App;
+using Google.Cloud.Firestore;
 
 namespace ECED_APP
 {
     class DBConection : AppCompatActivity
     {
         FirebaseFirestore database;
-
+        
         public static FirebaseFirestore GetDatabase()
         {
             FirebaseFirestore database;
@@ -37,3 +38,4 @@ namespace ECED_APP
 
     }
 }
+
