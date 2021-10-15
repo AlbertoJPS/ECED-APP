@@ -243,26 +243,6 @@ namespace ECED_APP
             reference.Get();
 
 
-            //DocumentReference docRef = database.Collection(nomeAluno).Document("Boletim");
-            //DocumentSnapshot snapshot = await docRef.Get();
-            //if (snapshot.Exists)
-            //{
-            //    Console.WriteLine("Document data for {0} document:", snapshot.Id);
-            //    Dictionary<string, object> city = snapshot.ToDictionary();
-            //    foreach (KeyValuePair<string, object> pair in city)
-            //    {
-            //        Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Document {0} does not exist!", snapshot.Id);
-            //}
-
-
-
-            //DocumentReference docRef = database.Collection("testAndroid").Document().Collection("subTestAndroid").Document();
-            //docRef.Get(doc);
 
         }
         //public static async Task<Response> MostrarDados(Fragment_Boletim name, List<string> vetor)
@@ -272,10 +252,10 @@ namespace ECED_APP
         //    DocumentSnapshot snap = reference.addSnapshotListener(new EventListener<QuerySnapshot>() { });
 
         //}
-        //        public override void onEvent(QuerySnapshot snapshots,FirebaseFirestoreException e)
-        //        {
+        //public override void onEvent(QuerySnapshot snapshots,FirebaseFirestoreException e)
+        //{
 
-        //        }
+        //}
 
     }
 }

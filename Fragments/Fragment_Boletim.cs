@@ -19,29 +19,23 @@ using static AndroidX.AppCompat.App.AppCompatActivity;
 
 namespace ECED_APP.Fragments
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/EcedTheme", MainLauncher = false)/*, FirestoreData*/]
+    [Activity(Label = "@string/app_name", Theme = "@style/EcedTheme", MainLauncher = false)]
     public class Fragment_Boletim : AndroidX.Fragment.App.Fragment
     {
         private FirebaseFirestore boletimDB;
-        private EditText Aluno;
-        private TextView materia;
-        private TextView nome;
-        private TextView nota1;
-        private TextView nota2;
-        private TextView nota3;
-        private TextView turma;
+
         private ScrollView scrollViewBoletim;
         private List<string> menuListBoletim;
         private ArrayAdapter listAdapterBoletim;
         private string nomeAluno;
 
-      
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             //boletimDB = ECED_APP.DBConection.GetDatabase();
-           // MostrarDados(nomeAluno);
+            // MostrarDados(nomeAluno);
 
 
 
@@ -64,17 +58,10 @@ namespace ECED_APP.Fragments
 
             //materia = FindViewById<TextView>(Resource.Id.materiaBoletim);
 
-            materia = (TextView)Materia;
-            nome = (TextView)NomeAluno;
-            nota1 = (TextView)Nota1;
-            nota2 = (TextView)Nota2;
-            nota3 = (TextView)Nota3;
-            turma = (TextView)Turma;
-
             FetchData();
         }
-       
-        void FetchData ()
+
+        void FetchData()
         {
             boletimDB.Collection(nomeAluno).Get().AddOnSuccessListener((IOnSuccessListener)this);
         }
@@ -86,25 +73,5 @@ namespace ECED_APP.Fragments
             return view;
         }
 
-
-        
     }
-
-    //[FirestoreData]
-    //public class Boletim
-    //{
-    //    [FirestoreProperty]
-    //    public string NomeAluno { get; }
-    //    [FirestoreProperty]
-    //    public string Turma { get; }
-    //    [FirestoreProperty]
-    //    public string Materia { get; }
-    //    [FirestoreProperty]
-    //    public double Nota1 { get; }
-    //    [FirestoreProperty]
-    //    public double Nota2 { get; }
-    //    [FirestoreProperty]
-    //    public double Nota3 { get; }
-    //}
 }
-
