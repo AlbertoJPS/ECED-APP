@@ -11,15 +11,24 @@ using System.Text;
 using Firebase;
 using Firebase.Firestore;
 using AndroidX.AppCompat.App;
-using Google.Cloud.Firestore;
+//using Google.Cloud.Firestore;
 
 namespace ECED_APP
 {
+    
     class DBConection : AppCompatActivity
     {
+        public string NomeAluno { get; }
+        public string Turma { get; }
+        public string Materia { get; }
+        public double Nota1 { get; }
+        public double Nota2 { get; }
+        public double Nota3 { get; }
+
+
         FirebaseFirestore database;
         
-        public static FirebaseFirestore GetDatabase()
+        public FirebaseFirestore GetDatabase()
         {
             FirebaseFirestore database;
             var options = new FirebaseOptions.Builder()

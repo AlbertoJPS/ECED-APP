@@ -15,11 +15,11 @@ using System.Text;
 using System.Threading.Tasks;
 using static ECED_APP.DBConection;
 using static AndroidX.AppCompat.App.AppCompatActivity;
-using Google.Cloud.Firestore;
+//using Google.Cloud.Firestore;
 
 namespace ECED_APP.Fragments
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/EcedTheme", MainLauncher = false), FirestoreData]
+    [Activity(Label = "@string/app_name", Theme = "@style/EcedTheme", MainLauncher = false)/*, FirestoreData*/]
     public class Fragment_Boletim : AndroidX.Fragment.App.Fragment
     {
         private FirebaseFirestore boletimDB;
@@ -30,31 +30,18 @@ namespace ECED_APP.Fragments
         private TextView nota2;
         private TextView nota3;
         private TextView turma;
-        private ScrollView scrollView;
-        private List<string> menuList;
-        private ArrayAdapter listAdapter;
+        private ScrollView scrollViewBoletim;
+        private List<string> menuListBoletim;
+        private ArrayAdapter listAdapterBoletim;
         private string nomeAluno;
 
-        [FirestoreProperty]
-        public string NomeAluno { get; }
-        [FirestoreProperty]
-        public string Turma { get; }
-        [FirestoreProperty]
-        public string Materia { get; }
-        [FirestoreProperty]
-        public double Nota1 { get; }
-        [FirestoreProperty]
-        public double Nota2 { get; }
-        [FirestoreProperty]
-        public double Nota3 { get; }
+      
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            boletimDB = DBConection.GetDatabase();
-            nomeAluno = Aluno.Text.ToUpper();
-            //DocumentReference reference = boletimDB.Collection(nomeAluno).Document("Boletim");
-            //MostrarDados(nomeAluno);
+            //boletimDB = ECED_APP.DBConection.GetDatabase();
+           // MostrarDados(nomeAluno);
 
 
 
@@ -86,6 +73,7 @@ namespace ECED_APP.Fragments
 
             FetchData();
         }
+       
         void FetchData ()
         {
             boletimDB.Collection(nomeAluno).Get().AddOnSuccessListener((IOnSuccessListener)this);
@@ -99,25 +87,7 @@ namespace ECED_APP.Fragments
         }
 
 
-        //public static async Task<Response> MostrarDados(Boletim name, List<string> vetor)
-        //{
-        //    try
-        //    {
-        //        DocumentReference reference = DBConection.GetDatabase().Collection(name.NomeAluno).Document("Boletim");
-
-        //        DocumentSnapshot snap = await reference.GetSnapshotAsync();
-        //        if (snap.Exists)
-        //        {
-        //            Dictionary<string, object> dados = snap.ToDictionary();
-        //            foreach (var item in dados)
-        //            {
-        //                vetor.Add(item.Value.ToString());
-
-        //            }
-        //        }
-        //        vetor.Sort();
-        //    }
-        //}
+        
     }
 
     //[FirestoreData]

@@ -15,6 +15,7 @@
         android:layout_marginHorizontal="30dp"/>
 
     <Button
+        android:id="@+id/botaoBoletim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/navBoletim"
@@ -29,7 +30,8 @@
         android:id="@+id/scrollViewBoletim"
         android:layout_centerHorizontal="true"
         android:background="@color/ecedPrimary"
-        android:scrollbarStyle="insideOverlay">
+        android:scrollbarStyle="insideOverlay"
+        android:isScrollContainer="true">
 
         <LinearLayout
             android:layout_width="match_parent"

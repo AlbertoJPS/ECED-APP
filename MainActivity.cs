@@ -1,5 +1,7 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Gms.Common.Apis;
+using Android.Nfc;
 using Android.OS;
 using Android.Runtime;
 using Android.Util;
@@ -12,9 +14,12 @@ using ECED_APP.Fragments;
 using Firebase;
 using Firebase.Firestore;
 using Java.Util;
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Xamarin.Io.OpenCensus.Tags;
 using SupportFragment = AndroidX.Fragment.App.Fragment;
-
+using Tag = Android.Nfc.Tag;
 
 namespace ECED_APP
 {
@@ -22,8 +27,8 @@ namespace ECED_APP
     public class MainActivity : AppCompatActivity
     {
         
-        AndroidX.DrawerLayout.Widget.DrawerLayout drawerLayout;
-        AndroidX.AppCompat.Widget.Toolbar mainToolbar;
+        private AndroidX.DrawerLayout.Widget.DrawerLayout drawerLayout;
+        private AndroidX.AppCompat.Widget.Toolbar mainToolbar;
         private AppDrawerToggle drawerToggle;
         private ListView listView;
         private ArrayAdapter listAdapter;
@@ -37,8 +42,16 @@ namespace ECED_APP
         private Fragment_Comunicado fragment_Comunicado;
         private Fragment_Configuracoes fragment_Configuracoes;
         private List<string> menuList;
-
-
+        private static FirebaseFirestore database;
+        private Button botaoBoletim;
+        private string nomeAluno;
+        private EditText aluno;
+        private TextView materia;
+        private TextView nome;
+        private TextView nota1;
+        private TextView nota2;
+        private TextView nota3;
+        private TextView turma;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -48,55 +61,56 @@ namespace ECED_APP
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main_Activity);
-            DBConection.GetDatabase();
+            GetDatabase();
             CreateFragmentsPages();
+
             currentFragment = fragment_Boletim;
+
             CreateNavigatorListView();
             ConnectNavigator();
 
-
-
-
-
-
-
         }
-       
+        public FirebaseFirestore GetDatabase()
+        {
+            FirebaseFirestore database;
+            var options = new FirebaseOptions.Builder()
+                .SetProjectId("eced-e3031")
+                .SetApplicationId("eced-e3031")
+                .SetApiKey("AIzaSyCcS9iPYxmtL6mbjv9poP_Fk37uWgbYkl8")
+                .SetDatabaseUrl("https://eced-e3031.firebaseio.com")
+                .SetStorageBucket("eced-e3031.appspot.com")
+                .Build();
 
+            var app = FirebaseApp.InitializeApp(this, options);
+            database = FirebaseFirestore.GetInstance(app);
+
+            return database;
+        }
         void ConnectNavigator()
         {
 
             drawerLayout = FindViewById<AndroidX.DrawerLayout.Widget.DrawerLayout>(Resource.Id.drawerLayout);
-            mainToolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar> (Resource.Id.mainToolbar);
+            mainToolbar = FindViewById<AndroidX.AppCompat.Widget.Toolbar>(Resource.Id.mainToolbar);
             //listView = FindViewById<ListView>(Resource.Id.listNavView);
-            TextView = FindViewById<TextView>(Resource.Id.materiaBoletim);
-
-
+            //TextView = FindViewById<TextView>(Resource.Id.materiaBoletim);
+            aluno = FindViewById<EditText>(Resource.Id.editTextBoletim); 
+            botaoBoletim = FindViewById<Button>(Resource.Id.botaoBoletim);
 
 
             SetSupportActionBar(mainToolbar);
 
-            drawerToggle = new AppDrawerToggle( this,  drawerLayout,  Resource.String.openDrawer, Resource.String.closeDrawer);
+            drawerToggle = new AppDrawerToggle(this, drawerLayout, Resource.String.openDrawer, Resource.String.closeDrawer);
 
             SupportActionBar.Title = "";
             AndroidX.AppCompat.App.ActionBar actionBar = SupportActionBar;
 
             drawerLayout.AddDrawerListener(drawerToggle);
 
-            //actionBar.SetHomeAsUpIndicator(Resource.Mipmap.ic_menu);
-            //actionBar.SetDisplayShowTitleEnabled(true);
             actionBar.SetHomeButtonEnabled(true);
             actionBar.SetDisplayHomeAsUpEnabled(true);
 
             drawerToggle.SyncState();
-
-
         }
-        //public override bool OnCreateOptionsMenu(IMenu menu)
-        //{
-        //    MenuInflater.Inflate(Resource.Menu.nav_menu, menu);
-        //    return base.OnCreateOptionsMenu(menu);
-        //}
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
 
@@ -211,26 +225,57 @@ namespace ECED_APP
 
             drawerLayout.CloseDrawer(listView);
         }
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private async void BotaoBoletim_Click(object sender, System.EventArgs e)
+        {
+
+            HashMap doc = new HashMap();
+            doc.Put("origem", aluno.Text);
+            nomeAluno = aluno.Text.ToUpper();
+
+            DocumentReference reference = database.Collection(nomeAluno).Document("Boletim");
+            reference.Get();
 
 
-        //private void TestButton_Click(object sender, System.EventArgs e)
+            //DocumentReference docRef = database.Collection(nomeAluno).Document("Boletim");
+            //DocumentSnapshot snapshot = await docRef.Get();
+            //if (snapshot.Exists)
+            //{
+            //    Console.WriteLine("Document data for {0} document:", snapshot.Id);
+            //    Dictionary<string, object> city = snapshot.ToDictionary();
+            //    foreach (KeyValuePair<string, object> pair in city)
+            //    {
+            //        Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Document {0} does not exist!", snapshot.Id);
+            //}
+
+
+
+            //DocumentReference docRef = database.Collection("testAndroid").Document().Collection("subTestAndroid").Document();
+            //docRef.Get(doc);
+
+        }
+        //public static async Task<Response> MostrarDados(Fragment_Boletim name, List<string> vetor)
         //{
-        //    HashMap doc = new HashMap();
-        //    doc.Put("origem", origem.Text);
-        //    doc.Put("destino", destino.Text);
+        //    DocumentReference reference = database.Collection(name.NomeAluno).Document("Boletim");
 
-        //    DocumentReference docRef = database.Collection("testAndroid").Document().Collection("subTestAndroid").Document();
-        //    docRef.Set(doc);
+        //    DocumentSnapshot snap = reference.addSnapshotListener(new EventListener<QuerySnapshot>() { });
 
         //}
+        //        public override void onEvent(QuerySnapshot snapshots,FirebaseFirestoreException e)
+        //        {
 
-        //public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        //{
-        //    Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        //    base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        //}
-
+        //        }
 
     }
 }
